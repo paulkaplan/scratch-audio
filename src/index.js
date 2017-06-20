@@ -221,6 +221,10 @@ class AudioEngine {
         );
     }
 
+    storeBuffer (md5, buffer) {
+        this.audioBuffers[md5] =  new Tone.Buffer(buffer);
+    }
+
     /**
      * An older version of the AudioEngine had this function to load all sounds
      * This is a stub to provide a warning when it is called
